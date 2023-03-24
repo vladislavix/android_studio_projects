@@ -18,8 +18,28 @@ public class MainActivity extends AppCompatActivity {
         counterView = (TextView)findViewById(R.id.clicks_count);
     }
 
+    private void applyCounter() {
+        counterView.setText("Clicks: " + counter.toString());
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("counter", counter);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        if (savedInstanceState != null && savedInstanceState.containsKey("counter"))
+            counter = savedInstanceState.getInt("counter");
+
+        applyCounter();
+    }
+
     public void onClickButton(View view) {
         counter++;
-        counterView.setText("Clicks: " + counter.toString());
+        applyCounter();
     }
 }
