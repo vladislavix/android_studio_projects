@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">football match</string>
+    <string name="add_team">Add</string>
+    <string name="reset">Reset</string>
+</resources>
