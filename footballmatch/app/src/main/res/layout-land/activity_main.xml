@@ -16,6 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.110000014"
+        app:srcCompat="@drawable/flag_of_djibouti"
         tools:srcCompat="@drawable/flag_of_djibouti" />
 
     <ImageView
@@ -28,6 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.110000014"
+        app:srcCompat="@drawable/flag_of_suriname_svg"
         tools:srcCompat="@drawable/flag_of_suriname_svg" />
 
     <TextView
