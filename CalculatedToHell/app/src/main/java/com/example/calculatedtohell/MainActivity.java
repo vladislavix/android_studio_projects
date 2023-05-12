@@ -21,13 +21,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void onButtonClick(View view) {
         try {
-            int a = Integer.parseInt(firstValue.getText().toString());
-            int b = Integer.parseInt(secondValue.getText().toString());
+            Integer a = Integer.parseInt(firstValue.getText().toString());
+            Integer b = Integer.parseInt(secondValue.getText().toString());
 
-            int result = a + b;
+            Integer result = a + b;
 
             Intent intent = new Intent(this, ResultActivity.class);
-            intent.putExtra("answer", Integer.toString(result));
+
+            String ansB = b < 0 ? "(" + b + ")" : b.toString();
+
+            intent.putExtra("answer", String.format("%d + %s = %d", a, ansB, result));
 
             startActivity(intent);
         } catch (Exception ex) {
